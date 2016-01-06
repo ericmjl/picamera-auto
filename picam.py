@@ -11,10 +11,10 @@ if __name__ == "__main__":
     
     imgdir = '/home/pi/data/images'
 
-    p = pc.PiCamera()
 
     while True:
-        now = dt.now()
-        p.capture('{0}/{1}.jpg'.format(imgdir, str(now)), format='jpeg')
-        sleep(30)
+        with pc.PiCamera() as p:
+            now = dt.now()
+            p.capture('{0}/{1}.jpg'.format(imgdir, str(now)), format='jpeg')
+            sleep(30)
     
