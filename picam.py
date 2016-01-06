@@ -7,7 +7,7 @@ import os
 if __name__ == "__main__":
 
     if "images" not in os.listdir('/home/pi/data/'):
-        os.mkdir('images')
+        os.mkdir('/home/pi/data/images')
     
     imgdir = '/home/pi/data/images'
 
