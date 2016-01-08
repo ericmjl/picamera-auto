@@ -16,5 +16,5 @@ if __name__ == "__main__":
         with pc.PiCamera(resolution=(2560,1920)) as p:
             now = dt.now()
             p.capture('{0}/{1}.jpg'.format(imgdir, str(now)), format='jpeg')
-            sleep(30)
+            sleep(60)
     
