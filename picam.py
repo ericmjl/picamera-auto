@@ -21,10 +21,19 @@ if __name__ == "__main__":
 
 
     while True:
+        now = dt.now()
         with pc.PiCamera(resolution=(2560,1920)) as p:
+            
             p.exposure_mode = 'beach'
+            p.framerate = 30
             sleep(2)
-            now = dt.now()
+            # Now fix the values
+            p.shutter_speed = p.exposure_speed
+            p.exposure_mode = 'off'
+            g = p.awb_gains
+            p.awb_mode = 'off'
+            p.awb_gains = g
+            
             p.capture('{0}/{1}.jpg'.format(imgdir, str(now)), format='jpeg')
-            wait()
+        wait()
     
