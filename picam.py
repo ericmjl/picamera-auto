@@ -28,7 +28,7 @@ if __name__ == "__main__":
             sleep(2)
             # Now fix the values
             p.shutter_speed = p.exposure_speed
-            p.exposure_mode = 'beach'
+            p.exposure_mode = 'off'
             g = p.awb_gains
             p.awb_mode = 'off'
             p.awb_gains = g
