@@ -6,7 +6,7 @@ import os
 
 def wait():
     # Calculate the delay to the start of the next hour
-    next_minute = (dt.now() + td(minute=1)).replace(second=0, microsecond=0)
+    next_minute = (dt.now() + td(minutes=1)).replace(second=0, microsecond=0)
     delay = (next_minute - dt.now()).seconds
     time.sleep(delay)
 
