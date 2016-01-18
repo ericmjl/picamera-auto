@@ -25,7 +25,7 @@ if __name__ == "__main__":
         with pc.PiCamera(resolution=(2560,1920)) as p:
             
             p.framerate = 30
-            # sleep(2)
+            sleep(2)
             # Now fix the values
             p.shutter_speed = p.exposure_speed
             p.exposure_mode = 'off'
