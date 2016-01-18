@@ -24,12 +24,11 @@ if __name__ == "__main__":
         now = dt.now()
         with pc.PiCamera(resolution=(2560,1920)) as p:
             
-            p.exposure_mode = 'beach'
             p.framerate = 30
             sleep(2)
             # Now fix the values
             p.shutter_speed = p.exposure_speed
-            p.exposure_mode = 'off'
+            p.exposure_mode = 'beach'
             g = p.awb_gains
             p.awb_mode = 'off'
             p.awb_gains = g
