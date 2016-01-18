@@ -1,12 +1,13 @@
 import picamera as pc
 from time import time, sleep
 from datetime import datetime as dt
+from datetime import timedelta as td
 import os
 
 def wait():
     # Calculate the delay to the start of the next hour
-    next_minute = (datetime.now() + timedelta(minute=1)).replace(second=0, microsecond=0)
-    delay = (next_minute - datetime.now()).seconds
+    next_minute = (dt.now() + td(minute=1)).replace(second=0, microsecond=0)
+    delay = (next_minute - dt.now()).seconds
     time.sleep(delay)
 
 
